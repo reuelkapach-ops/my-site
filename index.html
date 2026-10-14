@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דני כהן | מורה נהיגה</title>
+<meta name="description" content="מורה נהיגה בתל אביב והמרכז. שיעורי נהיגה אישיים ברכב אוטומט וידני, הגה כפול והכנה לטסט.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="דני כהן | מורה נהיגה בתל אביב והמרכז">
+<meta property="og:description" content="שיעורי נהיגה אישיים ברכב אוטומט וידני, עם הגה כפול והכנה לטסט.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%23FFC20E'/%3E%3Ctext x='50' y='76' font-size='70' font-weight='700' text-anchor='middle' fill='%23111'%3E%D7%9C%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "דני כהן - מורה נהיגה",
+  "description": "שיעורי נהיגה אישיים ברכב אוטומט וידני, עם הגה כפול והכנה לטסט.",
+  "telephone": "+972-50-000-0000",
+  "areaServed": "תל אביב והמרכז",
+  "priceRange": "₪125-₪150 לשיעור"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Secular+One&display=swap" rel="stylesheet">
+<style>
+:root {
+  --asphalt: #2B2F36;
+  --line: #FFC20E;
+  --sign: #0A4DA2;
+  --paper: #F2F3F0;
+  --surface: #FFFFFF;
+  --ink: #1E2127;
+  --muted: #5A606B;
+  --edge: #D8DAD4;
+  --stop: #D7263D;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1B1E23;
+    --surface: #242830;
+    --ink: #ECEDEF;
+    --muted: #A3A9B3;
+    --edge: #373C46;
+    --sign: #5B9BF0;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Heebo', system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+h1, h2, h3 { font-family: 'Secular One', 'Heebo', sans-serif; font-weight: 400; line-height: 1.15; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--line); outline-offset: 3px; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* header */
+header.top { background: var(--asphalt); color: #fff; position: sticky; top: 0; z-index: 10; }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; }
+.brand { font-family: 'Secular One', sans-serif; font-size: 1.3rem; text-decoration: none; }
+nav { display: flex; gap: 1.4rem; align-items: center; }
+nav a { text-decoration: none; font-size: .95rem; opacity: .85; }
+nav a:hover { opacity: 1; }
+.btn {
+  display: inline-block; background: var(--line); color: #1A1A1A; font-weight: 700;
+  padding: .75rem 1.5rem; border-radius: 6px; text-decoration: none; border: 0;
+  font-family: inherit; font-size: 1rem; cursor: pointer;
+}
+.btn:hover { background: #FFD24A; }
+.btn.ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.45); }
+.btn.ghost:hover { border-color: #fff; background: transparent; }
+nav .btn { padding: .45rem 1rem; font-size: .9rem; opacity: 1; }
+
+/* hero */
+.hero { background: var(--asphalt); color: #fff; padding: 4.5rem 0 5.5rem; position: relative; overflow: hidden; }
+.hero::after {
+  content: ""; position: absolute; inset-inline: 0; bottom: 1.6rem; height: 6px;
+  background: repeating-linear-gradient(to left, var(--line) 0 56px, transparent 56px 104px);
+}
+.hero .wrap { display: grid; grid-template-columns: 1.25fr .75fr; gap: 2rem; align-items: center; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); margin-bottom: 1.1rem; }
+.hero p.lead { font-size: 1.2rem; max-width: 34rem; color: #D9DCE1; margin-bottom: 2rem; }
+.hero .actions { display: flex; gap: .8rem; flex-wrap: wrap; }
+.learner {
+  justify-self: center; width: min(280px, 62vw); aspect-ratio: 1;
+  background: var(--line); color: #111; border: 10px solid #111; border-radius: 18px;
+  display: grid; place-items: center; transform: rotate(-5deg);
+  font-family: 'Secular One', sans-serif; font-size: clamp(7rem, 18vw, 10.5rem); line-height: 1;
+  box-shadow: 0 0 0 6px rgba(255,255,255,.12);
+  animation: settle .9s cubic-bezier(.2,.8,.3,1) both;
+}
+.learner span { transform: translateY(-.04em); }
+@keyframes settle {
+  from { transform: translateX(-70px) rotate(-14deg); opacity: 0; }
+  to { transform: rotate(-5deg); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .learner { animation: none; } html { scroll-behavior: auto; } }
+
+/* facts strip */
+.facts { background: var(--sign); color: #fff; }
+.facts ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; padding: 1rem 0; font-weight: 500; }
+
+section { padding: 4.5rem 0; }
+.sec-head { max-width: 36rem; margin-bottom: 2.5rem; }
+.sec-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+
+/* route */
+.route { list-style: none; position: relative; padding-inline-start: 4.2rem; }
+.route::before {
+  content: ""; position: absolute; inset-inline-start: 1.35rem; top: .6rem; bottom: .6rem; width: 6px;
+  background: repeating-linear-gradient(to bottom, var(--line) 0 22px, transparent 22px 40px);
+}
+.route li { position: relative; padding-bottom: 2.1rem; }
+.route li:last-child { padding-bottom: 0; }
+.route .n {
+  position: absolute; inset-inline-start: -4.2rem; top: 0; width: 2.9rem; height: 2.9rem;
+  background: var(--asphalt); color: var(--line); border-radius: 50%;
+  display: grid; place-items: center; font-family: 'Secular One', sans-serif; font-size: 1.2rem;
+  border: 3px solid var(--paper);
+}
+.route h3 { font-size: 1.35rem; margin-bottom: .2rem; }
+.route p { color: var(--muted); max-width: 40rem; }
+
+/* pricing */
+.alt { background: var(--surface); border-block: 1px solid var(--edge); }
+.prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.price { background: var(--paper); border: 2px solid var(--edge); border-radius: 8px; padding: 1.6rem; display: flex; flex-direction: column; }
+.price.main { border-color: var(--sign); }
+.price h3 { font-size: 1.3rem; }
+.price .sum { font-family: 'Secular One', sans-serif; font-size: 2.6rem; margin: .5rem 0 .2rem; }
+.price .sum small { font-size: 1rem; font-family: 'Heebo', sans-serif; color: var(--muted); }
+.price ul { list-style: none; color: var(--muted); font-size: .98rem; margin-top: .6rem; }
+.price li { padding: .25rem 0; border-top: 1px solid var(--edge); }
+.price li:first-child { border-top: 0; }
+.tag { align-self: flex-start; background: var(--sign); color: #fff; font-size: .85rem; padding: .1rem .7rem; border-radius: 99px; margin-bottom: .5rem; }
+.note { color: var(--muted); font-size: .9rem; margin-top: 1.2rem; }
+
+/* about */
+.about { display: grid; grid-template-columns: .8fr 1.2fr; gap: 3rem; align-items: center; }
+.portrait {
+  aspect-ratio: 4/5; border-radius: 8px; background: var(--asphalt); color: #9AA0AB;
+  display: grid; place-items: center; text-align: center; padding: 1rem; font-size: .95rem;
+  border-bottom: 8px solid var(--line);
+}
+.about h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 1rem; }
+.about p + p { margin-top: .9rem; }
+.about p { color: var(--muted); }
+.about p strong { color: var(--ink); }
+
+/* reviews */
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.review { background: var(--surface); border: 1px solid var(--edge); border-radius: 8px; padding: 1.4rem; border-inline-start: 6px solid var(--line); }
+.review p { margin-bottom: .8rem; }
+.review b { font-size: .95rem; color: var(--muted); font-weight: 500; }
+
+/* contact */
+.contact { background: var(--asphalt); color: #fff; }
+.contact .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.contact h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .8rem; }
+.contact p { color: #D0D4DA; }
+.details { list-style: none; margin-top: 1.4rem; }
+.details li { padding: .45rem 0; }
+.details a { font-weight: 700; }
+.panel { background: #fff; color: #1E2127; border-radius: 8px; padding: 1.6rem; }
+label { display: block; font-weight: 500; margin-bottom: .3rem; font-size: .95rem; }
+input, select, textarea {
+  width: 100%; font: inherit; padding: .7rem .8rem; border: 2px solid #CBCED4; border-radius: 6px;
+  background: #fff; color: #1E2127; margin-bottom: 1rem;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--sign); outline: none; }
+.panel .btn { width: 100%; }
+#status { margin-top: .8rem; font-size: .92rem; color: #4B5160; min-height: 1.4em; }
+
+footer { background: #1D2025; color: #9AA0AB; padding: 1.4rem 0; font-size: .9rem; }
+
+@media (max-width: 800px) {
+  nav a:not(.btn) { display: none; }
+  .hero .wrap, .about, .contact .grid { grid-template-columns: 1fr; }
+  .prices, .reviews { grid-template-columns: 1fr; }
+  .learner { order: -1; width: 180px; font-size: 6.5rem; }
+  .hero { padding-top: 2.5rem; }
+  .portrait { aspect-ratio: 16/10; }
+  section { padding: 3.2rem 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">דני כהן · מורה נהיגה</a>
+    <nav aria-label="ניווט ראשי">
+      <a href="#route">המסלול</a>
+      <a href="#prices">מחירים</a>
+      <a href="#about">אודות</a>
+      <a href="#reviews">המלצות</a>
+      <a class="btn" href="#contact">קבעו שיעור</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>ללמוד לנהוג בלי לחץ</h1>
+        <p class="lead">שיעורי נהיגה אישיים ברכב אוטומט או ידני, עם הגה כפול ומורה סבלני. אנחנו מתקדמים בקצב שלכם עד שמגיעים לטסט בביטחון.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">קבעו שיעור ראשון</a>
+          <a class="btn ghost" href="#route">איך זה עובד</a>
+        </div>
+      </div>
+      <div class="learner" role="img" aria-label="שלט נהג חדש"><span>ל</span></div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <ul>
+        <li>רכב אוטומט וידני</li>
+        <li>הגה כפול ומיזוג</li>
+        <li>איסוף מהבית או מבית הספר</li>
+        <li>שעות גמישות, גם בערב</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="route">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>הדרך לרישיון, שלב אחרי שלב</h2>
+        <p>כל תלמיד מתקדם בקצב שלו. כך נראה המסלול הרגיל.</p>
+      </div>
+      <ol class="route">
+        <li><span class="n">1</span><h3>שיעור היכרות</h3><p>נפגשים, מכירים את הרכב ומתרגלים התנעה, מראות ותנועה בשטח שקט.</p></li>
+        <li><span class="n">2</span><h3>שליטה ברכב</h3><p>האצה, בלימה, פנייה ועצירה חלקה. אחרי השלב הזה הרכב מרגיש טבעי.</p></li>
+        <li><span class="n">3</span><h3>נהיגה בעיר</h3><p>רמזורים, צמתים, זכות קדימה וחניה. מתרגלים בשעות שקטות ואחר כך בעומס.</p></li>
+        <li><span class="n">4</span><h3>כבישים מהירים ומעגלי תנועה</h3><p>עקיפות, התמזגות ומעגלי תנועה מורכבים, צעד אחר צעד.</p></li>
+        <li><span class="n">5</span><h3>הכנה לטסט</h3><p>סימולציות על מסלולי הטסט, תרגול הטעויות הנפוצות ושיעור אחרון ביום הטסט.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="prices" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>מחירים</h2>
+        <p>שיעור נמשך 40 דקות. ככל שלוקחים חבילה גדולה, המחיר לשיעור יורד.</p>
+      </div>
+      <div class="prices">
+        <div class="price">
+          <h3>שיעור בודד</h3>
+          <div class="sum">₪150 <small>לשיעור</small></div>
+          <ul><li>מתאים להתנסות</li><li>ללא התחייבות</li></ul>
+        </div>
+        <div class="price main">
+          <span class="tag">הכי פופולרי</span>
+          <h3>חבילת 10 שיעורים</h3>
+          <div class="sum">₪1,350 <small>(₪135 לשיעור)</small></div>
+          <ul><li>איסוף מהבית</li><li>אפשר להזיז שיעור עד 12 שעות מראש</li></ul>
+        </div>
+        <div class="price">
+          <h3>חבילת 20 + רכב לטסט</h3>
+          <div class="sum">₪2,500 <small>(₪125 לשיעור)</small></div>
+          <ul><li>שיעור לפני הטסט</li><li>הרכב שלי בטסט</li></ul>
+        </div>
+      </div>
+      <p class="note">המחירים כאן הם דוגמה. עדכנו אותם במחירים האמיתיים.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="portrait">מקום לתמונה שלכם<br>ליד הרכב</div>
+      <div>
+        <h2>מי אני</h2>
+        <p>שמי דני, ואני מלמד נהיגה <strong>יותר מ-15 שנה</strong>. עזרתי למאות תלמידים לעבור טסט, חלקם בניסיון הראשון וחלקם אחרי שנים של פחד מהכביש.</p>
+        <p>אני לא צועק ולא ממהר. אני מסביר פעם אחת בצורה ברורה ומתרגל עם התלמיד עד שזה יוצא טוב. הרכב ממוזג, נקי ועם <strong>הגה כפול</strong>, כך שאפשר להירגע ולהתרכז.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><h2>מה התלמידים אומרים</h2></div>
+      <div class="reviews">
+        <div class="review"><p>פחדתי מאוד מהכביש. אחרי חמישה שיעורים כבר נהגתי בעיר בלי לחץ. עברתי בטסט הראשון.</p><b>נועה, תל אביב</b></div>
+        <div class="review"><p>דני מסביר בפשטות ולא מלחיץ. הטיפים לטסט עזרו לי מאוד.</p><b>איתי, רמת גן</b></div>
+        <div class="review"><p>עשיתי אצלו רישיון על אוטומט בשבועות ספורים. ממליץ לכל מי שמתחיל.</p><b>מיכל, חולון</b></div>
+      </div>
+      <p class="note">ההמלצות כאן הן דוגמה. החליפו אותן בהמלצות אמיתיות.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap grid">
+      <div>
+        <h2>בואו נקבע שיעור ראשון</h2>
+        <p>מלאו את הפרטים ואני אחזור אליכם בהקדם. אפשר גם להתקשר או לשלוח הודעה.</p>
+        <ul class="details">
+          <li>טלפון: <a href="tel:0500000000">050-000-0000</a></li>
+          <li>וואטסאפ: <a href="https://wa.me/972500000000">שלחו הודעה</a></li>
+          <li>אזור פעילות: תל אביב והמרכז</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div id="leadForm">
+          <label for="name">שם</label>
+          <input id="name" autocomplete="name">
+          <label for="gear">סוג גיר</label>
+          <select id="gear">
+            <option>אוטומט</option>
+            <option>ידני</option>
+            <option>עדיין לא החלטתי</option>
+          </select>
+          <label for="msg">משהו שחשוב לי לדעת</label>
+          <textarea id="msg" rows="3" placeholder="למשל: אני מתחיל מאפס, או: יש לי טסט בעוד חודש"></textarea>
+          <button class="btn" type="button" id="send">שלחו בוואטסאפ</button>
+          <p id="status" role="status"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© דני כהן, מורה נהיגה. רישיון מורה נהיגה מס' 00000.</div>
+</footer>
+
+<script>
+  // Replace with the real WhatsApp number (international format, no + or 0 at start)
+  const PHONE = "972500000000";
+  document.getElementById("send").addEventListener("click", function () {
+    const name = document.getElementById("name").value.trim();
+    const status = document.getElementById("status");
+    if (!name) {
+      status.textContent = "כתבו את השם שלכם כדי שאדע איך לפנות אליכם.";
+      document.getElementById("name").focus();
+      return;
+    }
+    const gear = document.getElementById("gear").value;
+    const msg = document.getElementById("msg").value.trim();
+    const text = "היי דני, אני " + name + ". אני מעוניין/ת בשיעורי נהיגה (" + gear + ")." + (msg ? " " + msg : "");
+    status.textContent = "פותח וואטסאפ...";
+    window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(text), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
